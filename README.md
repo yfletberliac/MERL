@@ -100,4 +100,17 @@ To load:
 python -m baselines_merl.run --alg=ppo2_merl --env=HalfCheetah-v2 --num_timesteps=1e6 --load_path=~/models/halfcheetah_1M_ppomerl
 ```
 
-*NOTE:* Mujoco environments require normalization to work properly, so we wrap them with VecNormalize wrapper. Currently, to ensure the models are saved with normalization (so that trained models can be restored and run without further training) the normalization coefficients are saved as tensorflow variables. This can decrease the performance somewhat, so if you require high-throughput steps with Mujoco and do not need saving/restoring the models, it may make sense to use numpy normalization instead. To do that, set 'use_tf=False` in [baselines_merl/run.py](baselines_merl/run.py#L116).
+*NOTE:* Mujoco environments require normalization to work properly, so we wrap them with VecNormalize wrapper. Currently, to ensure the models are saved with normalization (so that trained models can be restored and run without further training) the normalization coefficients are saved as tensorflow variables. This can decrease the performance somewhat, so if you require high-throughput steps with Mujoco and do not need saving/restoring the models, it may make sense to use numpy normalization instead. To do that, set `use_tf=False` in [baselines_merl/run.py](baselines_merl/run.py#L116).
+
+
+## Paper
+For a detailed description of the architecture please read [our paper](https://hal.inria.fr/hal-02305105/document).
+
+```
+@inproceedings{fletberliac2019merl,
+  title={MERL: Multi-Head Reinforcement Learning},
+  author={Flet-Berliac, Yannis and Preux, Philippe},
+  booktitle={Deep Reinforcement Learning Workshop (NeurIPS 2019)},
+  year={2019}
+}
+```
