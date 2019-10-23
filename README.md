@@ -1,6 +1,6 @@
 # MERL: Multi-Head Reinforcement Learning
 
-This repository has been forked from [OpenAI baselines](https://github.com/openai/baselines)
+This repository has been forked from [OpenAI baselines](https://github.com/openai/baselines).
 ## Prerequisites 
 MERL requires python3 (>=3.5) with the development headers. You'll also need system packages CMake, OpenMPI and zlib. Those can be installed as follows
 ### Ubuntu 
