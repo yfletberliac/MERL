@@ -59,6 +59,7 @@ You can start a simulation on the environment of your choice (eg. HalfCheetah-v2
 ```bash
 python -m baselines_merl.run --alg=<name of the algorithm> --env=<environment_id> [additional arguments]
 ```
+See [run.sh](run.sh) for a comprehensive list of arguments for this function.
 ### Example 1. PPO with MuJoCo HalfCheetah
 For instance, to train a fully-connected network controlling MuJoCo HalfCheetah using PPO for 1M timesteps
 ```bash
