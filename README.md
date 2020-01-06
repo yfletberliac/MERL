@@ -105,7 +105,7 @@ python -m baselines_merl.run --alg=ppo2_merl --env=HalfCheetah-v2 --num_timestep
 
 
 ## Paper
-For a detailed description of the architecture please read [our paper](https://hal.inria.fr/hal-02305105/document).
+For a detailed description of the architecture please read [our paper](https://arxiv.org/abs/1909.11939).
 
 ```
 @inproceedings{fletberliac2019merl,
