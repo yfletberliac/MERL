@@ -111,7 +111,7 @@ For a detailed description of the architecture please read [our paper](https://a
 @inproceedings{fletberliac2019merl,
   title={MERL: Multi-Head Reinforcement Learning},
   author={Flet-Berliac, Yannis and Preux, Philippe},
-  booktitle={Deep Reinforcement Learning Workshop (NeurIPS 2019)},
+  booktitle={Deep Reinforcement Learning Workshop, NeurIPS 2019},
   year={2019}
 }
 ```
