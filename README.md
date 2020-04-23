@@ -3,18 +3,7 @@
 This repository is the official implementation of [MERL](https://arxiv.org/abs/1909.11939).
 The code has been forked from [OpenAI baselines](https://github.com/openai/baselines).
 ## Prerequisites 
-MERL requires python3 (>=3.5) with the development headers. You'll also need system packages CMake, OpenMPI and zlib. Those can be installed as follows
-### Ubuntu 
-    
-```bash
-sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
-```
-    
-### Mac OS X
-Installation of system packages on Mac requires [Homebrew](https://brew.sh). With Homebrew installed, run the following:
-```bash
-brew install cmake openmpi
-```
+MERL requires python3 (>=3.5).
     
 ## Virtual environment
 From the general python package sanity perspective, it is a good idea to use virtual environments (virtualenvs) to make sure packages from different projects do not interfere with each other. You can install virtualenv (which is itself a pip package) via
@@ -36,7 +25,7 @@ More thorough tutorial on virtualenvs and options can be found [here](https://vi
 ## Installation
 - Clone the repo and cd into it:
     ```bash
-    git clone https://github.com/neurips-2019-id-4790/MERL.git
+    git clone https://github.com/yfletberliac/MERL.git
     cd MERL
     ```
 - If you don't have TensorFlow installed already, install your favourite flavor of TensorFlow. In most cases, 
