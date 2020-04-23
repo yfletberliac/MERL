@@ -4,7 +4,7 @@ def mujoco():
         nminibatches=32,
         lam=0.95,
         gamma=0.99,
-        noptepochs=10,
+        epochs=10,
         log_interval=1,
         ent_coef=0.0,
         lr=lambda f: 3e-4 * f,

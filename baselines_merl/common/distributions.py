@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 import baselines_merl.common.tf_util as U
-from baselines_merl.a2c.utils import fc
+from baselines_merl.common.utils import fc
 from tensorflow.python.ops import math_ops
 
 class Pd(object):

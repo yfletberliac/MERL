@@ -1,6 +1,6 @@
 import tensorflow as tf
 from baselines_merl.common import tf_util
-from baselines_merl.a2c.utils import fc
+from baselines_merl.common.utils import fc
 from baselines_merl.common.distributions import make_pdtype
 from baselines_merl.common.input import observation_placeholder, encode_observation
 from baselines_merl.common.tf_util import adjust_shape
