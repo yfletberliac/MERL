@@ -1,19 +1,9 @@
 # MERL: Multi-Head Reinforcement Learning
 
-This repository has been forked from [OpenAI baselines](https://github.com/openai/baselines)
+This repository is the official implementation of [MERL](https://arxiv.org/abs/1909.11939).
+The code has been forked from [OpenAI baselines](https://github.com/openai/baselines).
 ## Prerequisites 
-MERL requires python3 (>=3.5) with the development headers. You'll also need system packages CMake, OpenMPI and zlib. Those can be installed as follows
-### Ubuntu 
-    
-```bash
-sudo apt-get update && sudo apt-get install cmake libopenmpi-dev python3-dev zlib1g-dev
-```
-    
-### Mac OS X
-Installation of system packages on Mac requires [Homebrew](https://brew.sh). With Homebrew installed, run the following:
-```bash
-brew install cmake openmpi
-```
+MERL requires python3 (>=3.5).
     
 ## Virtual environment
 From the general python package sanity perspective, it is a good idea to use virtual environments (virtualenvs) to make sure packages from different projects do not interfere with each other. You can install virtualenv (which is itself a pip package) via
@@ -35,7 +25,7 @@ More thorough tutorial on virtualenvs and options can be found [here](https://vi
 ## Installation
 - Clone the repo and cd into it:
     ```bash
-    git clone https://github.com/neurips-2019-id-4790/MERL.git
+    git clone https://github.com/yfletberliac/MERL.git
     cd MERL
     ```
 - If you don't have TensorFlow installed already, install your favourite flavor of TensorFlow. In most cases, 
@@ -59,6 +49,7 @@ You can start a simulation on the environment of your choice (eg. HalfCheetah-v2
 ```bash
 python -m baselines_merl.run --alg=<name of the algorithm> --env=<environment_id> [additional arguments]
 ```
+See [run.sh](run.sh) for a comprehensive list of arguments for this function.
 ### Example 1. PPO with MuJoCo HalfCheetah
 For instance, to train a fully-connected network controlling MuJoCo HalfCheetah using PPO for 1M timesteps
 ```bash
@@ -100,4 +91,17 @@ To load:
 python -m baselines_merl.run --alg=ppo2_merl --env=HalfCheetah-v2 --num_timesteps=1e6 --load_path=~/models/halfcheetah_1M_ppomerl
 ```
 
-*NOTE:* Mujoco environments require normalization to work properly, so we wrap them with VecNormalize wrapper. Currently, to ensure the models are saved with normalization (so that trained models can be restored and run without further training) the normalization coefficients are saved as tensorflow variables. This can decrease the performance somewhat, so if you require high-throughput steps with Mujoco and do not need saving/restoring the models, it may make sense to use numpy normalization instead. To do that, set 'use_tf=False` in [baselines_merl/run.py](baselines_merl/run.py#L116).
+*NOTE:* Mujoco environments require normalization to work properly, so we wrap them with VecNormalize wrapper. Currently, to ensure the models are saved with normalization (so that trained models can be restored and run without further training) the normalization coefficients are saved as tensorflow variables. This can decrease the performance somewhat, so if you require high-throughput steps with Mujoco and do not need saving/restoring the models, it may make sense to use numpy normalization instead. To do that, set `use_tf=False` in [baselines_merl/run.py](baselines_merl/run.py#L116).
+
+
+## Paper
+For a detailed description of the architecture please read [our paper](https://arxiv.org/abs/1909.11939).
+
+```
+@inproceedings{fletberliac2019merl,
+  title={MERL: Multi-Head Reinforcement Learning},
+  author={Flet-Berliac, Yannis and Preux, Philippe},
+  booktitle={Deep Reinforcement Learning Workshop, NeurIPS 2019},
+  year={2019}
+}
+```
