@@ -39,7 +39,7 @@ setup(name='baselines_merl',
           'click',
           'opencv-python',
           'seaborn',
-          'tensorflow==1.14.0'
+          'tensorflow==1.15.2'
       ],
       extras_require=extras,
       description='OpenAI baselines: high quality implementations of reinforcement learning algorithms',
