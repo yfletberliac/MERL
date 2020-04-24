@@ -1,7 +1,6 @@
 # MERL: Multi-Head Reinforcement Learning
-
 This repository is the official implementation of [MERL](https://arxiv.org/abs/1909.11939).
-The code has been forked from [OpenAI baselines](https://github.com/openai/baselines).
+
 ## Prerequisites 
 MERL requires python3 (>=3.5).
     
@@ -19,8 +18,6 @@ To activate a virtualenv:
 ```
 . /path/to/venv/bin/activate
 ```
-More thorough tutorial on virtualenvs and options can be found [here](https://virtualenv.pypa.io/en/stable/) 
-
 
 ## Installation
 - Clone the repo and cd into it:
@@ -43,6 +40,7 @@ More thorough tutorial on virtualenvs and options can be found [here](https://vi
     
 ### MuJoCo
 [MuJoCo](http://www.mujoco.org) (multi-joint dynamics in contact) physics simulator is proprietary and requires binaries and a license (temporary 30-day license can be obtained from [www.mujoco.org](http://www.mujoco.org)). Instructions on setting up MuJoCo can be found [here](https://github.com/openai/mujoco-py)
+
 
 ## Training models
 You can start a simulation on the environment of your choice (eg. HalfCheetah-v2, ) like so:
@@ -91,8 +89,8 @@ To load:
 python -m baselines_merl.run --alg=ppo2_merl --env=HalfCheetah-v2 --num_timesteps=1e6 --load_path=~/models/halfcheetah_1M_ppomerl
 ```
 
-*NOTE:* Mujoco environments require normalization to work properly, so we wrap them with VecNormalize wrapper. Currently, to ensure the models are saved with normalization (so that trained models can be restored and run without further training) the normalization coefficients are saved as tensorflow variables. This can decrease the performance somewhat, so if you require high-throughput steps with Mujoco and do not need saving/restoring the models, it may make sense to use numpy normalization instead. To do that, set `use_tf=False` in [baselines_merl/run.py](baselines_merl/run.py#L116).
-
+## Original code
+The code has been forked from [OpenAI baselines](https://github.com/openai/baselines).
 
 ## Paper
 For a detailed description of the architecture please read [our paper](https://arxiv.org/abs/1909.11939).
