@@ -1,5 +1,5 @@
 # MERL: Multi-Head Reinforcement Learning
-This repository is the official implementation of [MERL](https://arxiv.org/abs/1909.11939).
+This repository is the official implementation of [MERL: Multi-Head Reinforcement Learning](https://arxiv.org/abs/1909.11939) accepted at the Deep Reinforcement Learning Workshop at NeurIPS 2019.
 
 ## Prerequisites 
 MERL requires python3 (>=3.5).
@@ -92,9 +92,7 @@ python -m baselines_merl.run --alg=ppo2_merl --env=HalfCheetah-v2 --num_timestep
 ## Original code
 The code has been forked from [OpenAI baselines](https://github.com/openai/baselines).
 
-## Paper
-For a detailed description of the architecture please read [our paper](https://arxiv.org/abs/1909.11939).
-
+## Reference
 ```
 @inproceedings{fletberliac2019merl,
   title={MERL: Multi-Head Reinforcement Learning},
