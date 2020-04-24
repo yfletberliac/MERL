@@ -25,7 +25,7 @@ To activate a virtualenv:
     git clone https://github.com/yfletberliac/MERL.git
     cd MERL
     ```
-- If you don't have TensorFlow installed already, install your favourite flavor of TensorFlow. In most cases, 
+- If you don't have TensorFlow installed already, install your favourite flavor of TensorFlow. Version `1.15.2` is preferred. In most cases, 
     ```bash 
     pip install tensorflow-gpu # if you have a CUDA-compatible gpu and proper drivers
     ```
